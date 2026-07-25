@@ -1,0 +1,93 @@
+databaseChangeLog:
+  # Создаем таблицу events
+  - changeSet:
+      id: 1-create-events-table
+      author: mkuzhvv
+      changes:
+        - createTable:
+            tableName: events
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: text
+              - column:
+                  name: event_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_tickets
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: available_tickets
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: decimal(10, 2)
+              - column:
+                  name: created_at
+                  type: timestamp
+              - column:
+                  name: updated_at
+                  type: timestamp
+
+  # Создаем таблицу bookings
+  - changeSet:
+      id: 2-create-bookings-table
+      author: mkuzhvv
+      changes:
+        - createTable:
+            tableName: bookings
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: event_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: user_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ticket_count
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_price
+                  type: decimal(10, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp

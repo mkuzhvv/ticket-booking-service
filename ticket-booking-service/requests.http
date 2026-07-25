@@ -1,0 +1,28 @@
+### Создание события (POST)
+POST http://localhost:8080/api/events
+Content-Type: application/json
+X-User-Role: ADMIN
+
+{
+  "name": "Концерт группы Кино",
+  "description": "Легендарный концерт",
+  "eventDate": "2026-12-31T20:00:00",
+  "totalTickets": 100,
+  "price": 1500.50
+}
+
+### Получить событие по ID (GET)
+GET http://localhost:8080/api/events/1
+
+### Забронировать билеты (POST)
+POST http://localhost:8080/api/bookings
+Content-Type: application/json
+
+{
+  "eventId": 1,
+  "userId": "user_123",
+  "ticketCount": 2
+}
+
+### Получить все бронирования пользователя
+GET http://localhost:8080/api/bookings?userId=user_123

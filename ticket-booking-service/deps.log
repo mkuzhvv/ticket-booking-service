@@ -1,0 +1,24 @@
+Initialized native services in: /Users/user/.gradle/native
+Initialized jansi services in: /Users/user/.gradle/native
+Received JVM installation metadata from '/Users/user/Library/Java/JavaVirtualMachines/openjdk-26.0.1/Contents/Home': {JAVA_HOME=/Users/user/Library/Java/JavaVirtualMachines/openjdk-26.0.1/Contents/Home, JAVA_VERSION=26.0.1, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=26.0.1+8-34, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=26.0.1+8-34, VM_VENDOR=Oracle Corporation, OS_ARCH=x86_64}
+Found daemon DaemonInfo{pid=38746, address=[cb5889de-37d0-42e0-bd51-6d6836de33a0 port:60151, addresses:[/127.0.0.1]], state=Idle, lastBusy=1785002727717, context=DefaultDaemonContext[uid=95d4c8a7-b399-4d3e-9c62-6274db4e3e42,javaHome=/usr/local/Cellar/openjdk@21/21.0.12/libexec/openjdk.jdk/Contents/Home,daemonRegistryDir=/Users/user/.gradle/daemon,pid=38746,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=RU,-Duser.language=ru,-Duser.variant]} however its context does not match the desired criteria.
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=/Users/user/Library/Java/JavaVirtualMachines/openjdk-26.0.1/Contents/Home,daemonRegistryDir=/Users/user/.gradle/daemon,pid=39460,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=RU,-Duser.language=ru,-Duser.variant]
+Actual: DefaultDaemonContext[uid=95d4c8a7-b399-4d3e-9c62-6274db4e3e42,javaHome=/usr/local/Cellar/openjdk@21/21.0.12/libexec/openjdk.jdk/Contents/Home,daemonRegistryDir=/Users/user/.gradle/daemon,pid=38746,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=RU,-Duser.language=ru,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 39016). The daemon log file: /Users/user/.gradle/daemon/8.7/daemon-39016.out.log
+Starting 2nd build in daemon [uptime: 5 mins 48.778 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 13% of 384 MiB]
+Using 12 worker leases.
+Invalidating in-memory cache of /Users/user/IdeaProjects/ticket-booking-service/ticket-booking-service/.gradle/8.7/fileHashes/fileHashes.bin
+Invalidating in-memory cache of /Users/user/IdeaProjects/ticket-booking-service/ticket-booking-service/.gradle/8.7/fileHashes/resourceHashesCache.bin
+Now considering [/Users/user/IdeaProjects/ticket-booking-service/ticket-booking-service] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Invalidating in-memory cache of /Users/user/.gradle/caches/8.7/fileHashes/fileHashes.bin
+Invalidating in-memory cache of /Users/user/.gradle/caches/8.7/fileHashes/resourceHashesCache.bin
+Invalidating in-memory cache of /Users/user/.gradle/caches/journal-1/file-access.bin
+Caching disabled for Kotlin DSL script compilation (Settings/TopLevel/stage1) because:
+  Build cache is disabled
+Watched directory hierarchies: []
