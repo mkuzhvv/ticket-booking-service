@@ -1,6 +1,6 @@
 package com.mkuzhvv.ticketbookingservice.repository;
 
-import com.mkuzhvv.ticketbookingservice.entity.Booking;
+import com.mkuzhvv.ticketbookingservice.model.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

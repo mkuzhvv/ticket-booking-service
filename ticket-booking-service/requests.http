@@ -20,9 +20,6 @@ Content-Type: application/json
 
 {
   "eventId": 1,
-  "userId": "user_123",
-  "ticketCount": 2
+  "userId": "user_999",
+  "ticketCount": 1
 }
-
-### Получить все бронирования пользователя
-GET http://localhost:8080/api/bookings?userId=user_123

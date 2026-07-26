@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mkuzhvv.ticket-booking-service.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mkuzhvv.ticket-booking-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mkuzhvv.ticket-booking-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mkuzhvv.ticket-booking-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mkuzhvv.ticket-booking-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mkuzhvv.ticket-booking-service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ticket-booking-service.iml" filepath="$PROJECT_DIR$/.idea/ticket-booking-service.iml" />
     </modules>
   </component>

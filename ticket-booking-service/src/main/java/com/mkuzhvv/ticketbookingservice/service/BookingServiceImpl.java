@@ -2,23 +2,31 @@ package com.mkuzhvv.ticketbookingservice.service;
 
 import com.mkuzhvv.ticketbookingservice.controller.exception.EventNotFoundException;
 import com.mkuzhvv.ticketbookingservice.controller.exception.NotEnoughTicketsException;
-import com.mkuzhvv.ticketbookingservice.dto.BookingRequest;
-import com.mkuzhvv.ticketbookingservice.dto.BookingResponse;
-import com.mkuzhvv.ticketbookingservice.entity.Booking;
-import com.mkuzhvv.ticketbookingservice.entity.Event;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingRequest;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingResponse;
+import com.mkuzhvv.ticketbookingservice.model.entity.Booking;
+import com.mkuzhvv.ticketbookingservice.model.entity.Event;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingEventMessage;
 import com.mkuzhvv.ticketbookingservice.mapper.BookingMapper;
+import com.mkuzhvv.ticketbookingservice.kafka.event.BookingCreatedEvent;
 import com.mkuzhvv.ticketbookingservice.repository.BookingRepository;
 import com.mkuzhvv.ticketbookingservice.repository.EventRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Service
 @Slf4j
 public class BookingServiceImpl implements BookingService {
+
+    @Autowired
+    private ApplicationEventPublisher applicationEventPublisher;
 
     @Autowired
     private EventRepository eventRepository;
@@ -56,6 +64,20 @@ public class BookingServiceImpl implements BookingService {
 
         Booking savedBooking = bookingRepository.save(booking);
         log.info("Booking successful: bookingId={} eventId={} totalPrice={}", savedBooking.getId(), savedBooking.getEventId(), totalPrice);
+
+        //cоздаём DTO для Kafka
+        BookingEventMessage message = BookingEventMessage.builder()
+                .messageId(UUID.randomUUID().toString())
+                .eventId(event.getId())
+                .eventName(event.getName())
+                .userId(request.getUserId())
+                .ticketCount(request.getTicketCount())
+                .totalPrice(booking.getTotalPrice())
+                .createdAt(LocalDateTime.now())
+                .build();
+
+        //публикуем спринг событие
+        applicationEventPublisher.publishEvent(new BookingCreatedEvent(this, message));
 
         return bookingMapper.toResponse(savedBooking);
     }

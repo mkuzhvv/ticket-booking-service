@@ -18,12 +18,18 @@ repositories {
 }
 
 dependencies {
+    // Основные стартеры Spring Boot 3.2.5
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-data-redis")
     implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("org.springframework.boot:spring-boot-starter-aop")
-    implementation("org.springframework.boot:spring-boot-starter-liquibase")
+    implementation("org.springframework.boot:spring-boot-starter-aop") // Для Rate Limiter
+
+    // !!! ИСПРАВЛЕНИЕ !!!
+    // В Spring Boot 3.x НЕТ spring-boot-starter-liquibase.
+    // Подключаем просто core, и Spring Boot сам его настроит (версию подставит плагин).
+    implementation("org.liquibase:liquibase-core")
+
     implementation("org.springframework.kafka:spring-kafka")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")

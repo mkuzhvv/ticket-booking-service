@@ -1,9 +1,9 @@
 package com.mkuzhvv.ticketbookingservice.mapper;
 
-import com.mkuzhvv.ticketbookingservice.dto.BookingRequest;
-import com.mkuzhvv.ticketbookingservice.dto.BookingResponse;
-import com.mkuzhvv.ticketbookingservice.entity.Booking;
-import com.mkuzhvv.ticketbookingservice.entity.BookingStatus;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingRequest;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingResponse;
+import com.mkuzhvv.ticketbookingservice.model.entity.Booking;
+import com.mkuzhvv.ticketbookingservice.model.entity.BookingStatus;
 import org.springframework.stereotype.Component;
 
 @Component

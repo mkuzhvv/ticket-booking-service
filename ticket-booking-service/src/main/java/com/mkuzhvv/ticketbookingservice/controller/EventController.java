@@ -1,7 +1,7 @@
 package com.mkuzhvv.ticketbookingservice.controller;
 
-import com.mkuzhvv.ticketbookingservice.dto.EventCreateRequest;
-import com.mkuzhvv.ticketbookingservice.dto.EventResponse;
+import com.mkuzhvv.ticketbookingservice.model.dto.EventCreateRequest;
+import com.mkuzhvv.ticketbookingservice.model.dto.EventResponse;
 import com.mkuzhvv.ticketbookingservice.controller.exception.AccessDeniedException;
 import com.mkuzhvv.ticketbookingservice.service.EventService;
 import jakarta.validation.Valid;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="ticket-booking-service" external.linked.project.path="$MODULE_DIR$/../../ticket-booking-service" external.root.project.path="$MODULE_DIR$/../../ticket-booking-service" external.system.id="GRADLE" external.system.module.group="com.mkuzhvv" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../ticket-booking-service">
+      <excludeFolder url="file://$MODULE_DIR$/../../ticket-booking-service/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../ticket-booking-service/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="homebrew-21 (2)" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

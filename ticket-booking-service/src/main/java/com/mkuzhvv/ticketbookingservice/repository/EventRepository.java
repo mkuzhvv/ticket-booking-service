@@ -1,6 +1,6 @@
 package com.mkuzhvv.ticketbookingservice.repository;
 
-import com.mkuzhvv.ticketbookingservice.entity.Event;
+import com.mkuzhvv.ticketbookingservice.model.entity.Event;
 import io.lettuce.core.dynamic.annotation.Param;
 import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;

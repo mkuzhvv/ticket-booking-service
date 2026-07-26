@@ -1,8 +1,8 @@
 package com.mkuzhvv.ticketbookingservice.controller;
 
 import com.mkuzhvv.ticketbookingservice.annotation.RateLimit;
-import com.mkuzhvv.ticketbookingservice.dto.BookingRequest;
-import com.mkuzhvv.ticketbookingservice.dto.BookingResponse;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingRequest;
+import com.mkuzhvv.ticketbookingservice.model.dto.BookingResponse;
 import com.mkuzhvv.ticketbookingservice.service.BookingService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;

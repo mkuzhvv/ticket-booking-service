@@ -1,8 +1,8 @@
 package com.mkuzhvv.ticketbookingservice.service;
 
-import com.mkuzhvv.ticketbookingservice.dto.EventCreateRequest;
-import com.mkuzhvv.ticketbookingservice.dto.EventResponse;
-import com.mkuzhvv.ticketbookingservice.entity.Event;
+import com.mkuzhvv.ticketbookingservice.model.dto.EventCreateRequest;
+import com.mkuzhvv.ticketbookingservice.model.dto.EventResponse;
+import com.mkuzhvv.ticketbookingservice.model.entity.Event;
 import com.mkuzhvv.ticketbookingservice.controller.exception.EventNotFoundException;
 import com.mkuzhvv.ticketbookingservice.mapper.EventMapper;
 import com.mkuzhvv.ticketbookingservice.repository.EventRepository;
